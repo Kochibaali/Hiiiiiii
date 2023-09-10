@@ -731,9 +731,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ ᴛᴏ sᴛᴀʀᴛ', callback_data='surprise')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
+        await client.edit_message(
             query.message.chat.id, 
-            query.message.id,             
+            query.message.id            
         )
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -758,7 +758,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start')      
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
+        await client.edit_message(
             query.message.chat.id, 
             query.message.id
         )
