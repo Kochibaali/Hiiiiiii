@@ -50,7 +50,7 @@ async def start(client, message):
         await asyncio.sleep(1)
         await m.delete()        
         await message.reply_text(        
-            caption=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            cap=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
