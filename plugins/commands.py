@@ -43,14 +43,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('തൊടരുത്', callback_data='start')
+            InlineKeyboardButton('TOUCH ME', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgIAAxkBAAI-3GT9SAWPWtYAAZ4AAbKifNSwZXWqqdcAAl8AAycUSQuaCso9g74YXTAE") 
         await asyncio.sleep(1)
         await m.delete()        
-        await message.reply_photo(
-            photo=random.choice(PICS),
+        await message.reply_text(        
             caption=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
