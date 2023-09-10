@@ -49,8 +49,7 @@ async def start(client, message):
         m=await message.reply_sticker("CAACAgIAAxkBAAI-3GT9SAWPWtYAAZ4AAbKifNSwZXWqqdcAAl8AAycUSQuaCso9g74YXTAE") 
         await asyncio.sleep(1)
         await m.delete()        
-        await message.reply_text(        
-            cap=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        await message.reply_text(script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
