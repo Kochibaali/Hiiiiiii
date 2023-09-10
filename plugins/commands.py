@@ -52,7 +52,35 @@ async def start(client, message):
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgIAAxkBAAI-3GT9SAWPWtYAAZ4AAbKifNSwZXWqqdcAAl8AAycUSQuaCso9g74YXTAE")         
+        
+        sticker_link = ['CAACAgIAAxkBAAI-4GT9b8fYy04hI4MMAAFj5f6BGjAdCwACXQADJxRJCwipeclqBbbFMAQ',
+     'CAACAgIAAxkBAAI-4mT9b80xtLVy3iahTZYu5hQd79lWAAJfAAMnFEkLmgrKPYO-GF0wBA',
+     'CAACAgIAAxkBAAI-5mT9cEioKsnBPevFivAsuvdgtmkDAAJ0AAMnFEkLA1THN6ZIAoIwBA',
+     'CAACAgIAAxkBAAI-6GT9cElBvu3nOA-I70ofoHaDYyxnAAJgAAMnFEkLQL2fiIlMXW0wBA',
+     'CAACAgIAAxkBAAI-6mT9cE0GzmmzKCTE-nXA3Jpup6osAAJ2AAMnFEkLdh0wN2aRoOkwBA',
+     'CAACAgIAAxkBAAI-6mT9cE0GzmmzKCTE-nXA3Jpup6osAAJ2AAMnFEkLdh0wN2aRoOkwBA',
+     'CAACAgIAAxkBAAI-7GT9cE4xAAEM7eF5ZTScCk1yVgMrMwACYwADJxRJC5prZI7aN9pbMAQ',
+     'CAACAgIAAxkBAAI-7mT9cE_wLizFHfVJu1Z2M5FEpcpLAAKDAAMnFEkL8GRKzTbndgswBA',
+     'CAACAgIAAxkBAAI-8GT9cE_MauvJ4iik67XV6j5mr-RzAAKHAAMnFEkLjqq19fsmkeYwBA',
+     'CAACAgIAAxkBAAI-8mT9cFCwJRSdznwwBD54oJP31cgEAAJrAAMnFEkLFM_JbfjiWsMwBA',
+     'CAACAgIAAxkBAAI-9GT9cFHhCoutlX_5BLeyi5osQH_aAAJsAAMnFEkLBpVOTK6jbNwwBA',
+     'CAACAgIAAxkBAAI-9mT9cFJqgiljB8kmD6E0Ir9_QERzAAJnAAMnFEkLTb_t3SyHTzowBA',
+     'CAACAgIAAxkBAAI--GT9cFPk1bEzg9nvAxN-GnF2CF6EAAKFAAMnFEkLEUQGV77vzbkwBA',
+     'CAACAgIAAxkBAAI--mT9cFSPBAzFuhiZ5shnlHWGKUdCAAJpAAMnFEkLMyVEt6E27_EwBA',
+     'CAACAgIAAxkBAAI-_GT9cFRKHncC2AtX_Xlny-Bqs5TQAAJoAAMnFEkLn_sHFYRhTWcwBA',
+     'CAACAgIAAxkBAAI-_mT9cFT6_xRikn_lAbIRd-a-e6TRAAJmAAMnFEkLHD0HjoSZuJcwBA',
+     'CAACAgIAAxkBAAI_AAFk_XBWFPCxmRkhyZsrkS3v6biFHAACbgADJxRJC15uk46z1ikxMAQ',
+     'CAACAgIAAxkBAAI_AmT9cFYGcw00rPLVP3ZktgHELK6hAAJ3AAMnFEkLyFQVrY6ZVMIwBA',
+     'CAACAgIAAxkBAAI_BGT9cFfp1QI4kg6LsaD5wyRAEC02AAKGAAMnFEkLFfc_36ZH6O4wBA',
+     'CAACAgIAAxkBAAI_BGT9cFfp1QI4kg6LsaD5wyRAEC02AAKGAAMnFEkLFfc_36ZH6O4wBA',
+     'CAACAgIAAxkBAAI_BmT9cFdDVUF3K8ZXop7DlOK1kHeUAAJtAAMnFEkLflvJaX7fobswBA',
+     'CAACagIAAxkBAAI_CGT9cFf5OFrOmHsJhiIev1oC2nDsAAKIAAMnFEkL3ey0F1JXBFUwBA',
+     'CAACAgIAAxkBAAI_DGT9cFmOdlj6OiCMfQHGTUzBjd79AAJ9AAMnFEkLsziJjDLFWZowBA',
+     'CAACAgIAAxkBAAI_DmT9cFqYyS3XV9PMfoBLip6CB6TaAAKGAAMnFEkLFfc_36ZH6O4wBA',
+     'CAACAgIAAxkBAAI_EGT9cFqmhvty8P7mOvodzXzqq9l5AAJ-AAMnFEkL8RW_cZ69CN8wBA',
+     'CAACAgIAAxkBAAI_EmT9cFoSOi2YZbwobyPEz-FJQ1DmAAKIAAMnFEkL3ey0F1JXBFUwBA']
+
+        m = await message.reply_sticker(random.choice(sticker_link))         
         await message.reply_text(script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
