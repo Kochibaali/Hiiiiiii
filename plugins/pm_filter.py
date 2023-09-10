@@ -758,9 +758,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start')      
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message(
-            query.message.chat.id, 
-            query.message.id
         )
         await query.message.edit_text(
             text="▣ ▢ ▢"
