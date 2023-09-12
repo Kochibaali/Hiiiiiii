@@ -88,11 +88,15 @@ async def start(client, message):
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message): 
         try:
-            invite_link_obj = await client.create_chat_invite_link(
+            if client.vysakh_xd is not None:
+                invite_link = client.vysakh_xd
+            else:
+                invite_link_obj = await client.create_chat_invite_link(
                 chat_id=int(AUTH_CHANNEL),
                 creates_join_request=True
-            )
-            invite_link = invite_link_obj.invite_link
+                )
+                invite_link = invite_link_obj.invite_link
+                client.vysakh_xd = invite_link
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
