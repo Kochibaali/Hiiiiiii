@@ -70,7 +70,7 @@ support_chat_id = environ.get('SUPPORT_CHAT_ID')
 TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
 
 # FSUB
-auth_channel = environ.get('AUTH_CHANNEL', "-1001548137263")
+auth_channel = environ.get('AUTH_CHANNEL', "-1001882474095")
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 # Command
