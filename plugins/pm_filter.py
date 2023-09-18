@@ -722,12 +722,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('ᴏᴡɴ ɪɴғᴏ', url='https://t.me/sk_movies12')
+            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/sk_movies_Group'),
+            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/sk_movies12')
         ], [
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
-         ]]
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
     
         await query.message.edit_text(
